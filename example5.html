@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/flex.css">
+		<link rel="stylesheet" href="css/example.css">
+	</head>
+
+	<body>
+
+		<h1>Align items (cross axis)</h1>
+
+		<div class="flex-container">
+			<section class="flex-1">	
+				<strong>1</strong> Lorem ipsum dolor sit amet.
+			</section>
+			<section class="flex-1">	
+				<strong>2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</section>
+			<section class="flex-1">	
+				Lorem ipsum dolor sit amet.
+			</section>
+		</div>
+
+		<hr />
+		<a id="start" href="#">Start</a> /
+		<a id="end" href="#">End</a> /
+		<a id="center" href="#">Center</a> /
+		<a id="baseline" href="#">Baseline</a> /
+		<a id="stretch" href="#">Stretch (default)</a> /
+	</body>
+	<script src="js/jquery-2.0.2.min.js"></script>
+		<script>
+			$(function(){
+				$('#start').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-align-items-start');
+				});	
+
+				$('#end').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-align-items-end');
+				});	
+
+				$('#center').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-align-items-center');
+				});	
+
+				$('#baseline').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-align-items-baseline');
+				});	
+
+				$('#stretch').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-align-items-stretch');
+				});	
+
+			})
+	</script>
+</html>

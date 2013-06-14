@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/flex.css">
+		<link rel="stylesheet" href="css/example.css">
+	</head>
+
+	<body>
+
+		<h1>Justify (main-axis)</h1>
+
+		<div class="flex-container">
+			<section class="">	
+				<strong>1</strong> Lorem ipsum dolor sit amet.
+			</section>
+			<section class="">	
+				<strong>2</strong> Lorem ipsum dolor sit amet.
+			</section>
+			<section class="">	
+				<strong>3</strong> Lorem ipsum dolor sit amet.
+			</section>
+		</div>
+
+		<hr />
+		<a id="end" href="#">End</a> /
+		<a id="center" href="#">Center</a> /
+		<a id="between" href="#">Space between</a> /
+		<a id="around" href="#">Space around</a> /
+	</body>
+	<script src="js/jquery-2.0.2.min.js"></script>
+		<script>
+			$(function(){
+				$('#end').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-justify-end');
+				});	
+
+				$('#center').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-justify-center');
+				});	
+
+				$('#between').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-justify-space-between');
+				});	
+
+				$('#around').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-justify-space-around');
+				});	
+			})
+	</script>
+</html>

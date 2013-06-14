@@ -1,0 +1,43 @@
+body{
+	padding: 20px;
+}
+
+h1{
+	font-size: 2em;
+	margin-bottom: .5em;
+}
+
+.flex-container{
+	border: 2px solid #00c;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.flex-1,
+.flex-2,
+.fixed,
+.flex-initial{
+	border: 1px solid #000;
+}
+
+.fixed{
+	width: 300px;
+	background: #c00 !important;
+}
+
+section{
+	margin: 5px 0;
+}
+
+section:nth-child(odd){
+	background: #0c0;
+}
+
+.padding{
+	padding: 20px;
+}
+
+strong{
+	font-weight: bold;
+	font-size: 2em;
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/flex.css">
+		<link rel="stylesheet" href="css/example.css">
+	</head>
+
+	<body>
+
+		<h1>Introduction to "flex"</h1>
+
+		<div class="flex-container">
+			<section class="flex-1">
+				.flex-1
+			</section>
+			<section class="flex-1">	
+				.flex-1
+			</section>
+		</div>
+
+		<div class="flex-container">
+			<section class="flex-2">
+				.flex-2
+			</section>
+			<section class="flex-2">	
+				.flex-2
+			</section>
+		</div>
+
+		<div class="flex-container">
+			<section class="flex-1">
+				.flex-1
+			</section>
+
+			<section class="flex-2">	
+				.flex-2
+			</section>
+		</div>
+
+		<div class="flex-container">
+			<section class="flex-1">
+				.flex-1
+			</section>
+
+			<section class="flex-1">	
+				.flex-1
+			</section>
+
+			<section class="flex-1">	
+				.flex-1
+			</section>
+		</div>
+
+		<div class="flex-container">
+			<section class="flex-1">
+				.flex-1
+			</section>
+
+			<section class="flex-1">	
+				.flex-1
+			</section>
+
+			<section class="flex-2">	
+				.flex-2
+			</section>
+		</div>
+
+		<div class="flex-container">
+			<section class="flex-1">
+				.flex-1
+			</section>
+
+			<section class="fixed">	
+				.fixed
+			</section>
+
+			<section class="flex-1">	
+				.flex-1
+			</section>
+		</div>
+		<hr />
+		<a id="add" href="#">Add columns</a> /
+		<a id="remove" href="#">Remove last column</a> /
+		<a id="padding-incorrect" href="#">Toggle incorrect padding</a> /
+		<a id="padding-correct" href="#">Toggle correct padding</a>
+	</body>
+	<script src="js/jquery-2.0.2.min.js"></script>
+	<script>
+		$(function(){
+			$('#add').on('click',function(e){
+				e.preventDefault();
+				$('.flex-container').append('<section class="flex-1">.flex-1</section>');
+			});	
+
+			$('#remove').on('click',function(e){
+				e.preventDefault();
+				$('.flex-container section:last-child').remove();
+			});	
+
+			$('#padding-incorrect').on('click',function(e){
+				e.preventDefault();
+				$('section').toggleClass('padding');
+			});
+
+			var correct_padding = false;
+			$('#padding-correct').on('click',function(e){
+				e.preventDefault();
+				if(correct_padding == false){
+					$('section').html('<div class="padding">' + $('section').html() + '</div>');
+					correct_padding = true;
+				}
+				else{
+					$('section').html($('section .padding').html());
+					$('.padding').remove();
+					correct_padding = false;
+				}
+			});
+		})
+	</script>
+</html>

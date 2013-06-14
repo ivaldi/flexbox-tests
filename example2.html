@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/flex.css">
+		<link rel="stylesheet" href="css/example.css">
+	</head>
+
+	<body>
+
+		<h1>Flex properties</h1>
+
+		<div class="flex-container">
+			<section class="fixed">
+				.fixed
+			</section>
+			<section class="flex-2">	
+				.flex-2
+			</section>
+			<section class="flex-2">	
+				.flex-2
+			</section>
+			<section class="flex-1">	
+				.flex-1
+			</section>
+		</div>
+
+		<div class="flex-container">
+			<section class="fixed flex-initial">
+				.fixed.flex-initial
+			</section>
+			<section class="flex-2">	
+				.flex-2
+			</section>
+			<section class="fixed">	
+				.fixed
+			</section>
+			<section class="flex-1">	
+				.flex-1
+			</section>
+		</div>
+		<hr />
+		<a id="inline" href="#">Toggle inline/flex</a> /
+		<a id="reverse" href="#">Reverse rows</a> /
+		<a id="column" href="#">Toggle rows/columns</a> /
+		<a id="column-reverse" href="#">Toggle reverse rows/columns</a> /
+	</body>
+	<script src="js/jquery-2.0.2.min.js"></script>
+		<script>
+			$(function(){
+				$('#inline').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-container-inline');
+				});	
+
+				$('#reverse').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-direction-row-reverse');
+				});	
+
+				$('#column').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-direction-column');
+				});	
+
+				$('#column-reverse').on('click',function(e){
+					e.preventDefault();
+					$('.flex-container').toggleClass('flex-direction-column-reverse');
+				});	
+			})
+	</script>
+</html>
